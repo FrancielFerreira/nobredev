@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+echo "O PHP é suportado por este servidor";
+?>
+
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -9,4 +13,4 @@
 <body>
   <h1>This is my portfolio, in work...</h1>
 </body>
-</html>
+</html> -->
