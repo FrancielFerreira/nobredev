@@ -1,0 +1,39 @@
+.projetos {
+  text-align: center;
+  color: #fff;
+  padding: 40px 0px;
+  background: #0d0d0d;
+}
+
+.projetos-lista {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px 0px;
+}
+
+.projetos-lista li {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.projetos-lista h2 {
+  font: 400 1rem/1.25 "Fira Code";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.projetos-lista img {
+  filter: brightness(.3);
+  object-position: top;
+  height: 500px;
+  transition: .8s ease-in;
+}
+.projetos-lista img:hover {
+  filter: brightness(.3) blur(3px);
+  object-position: bottom;
+}

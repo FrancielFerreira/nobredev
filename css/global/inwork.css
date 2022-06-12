@@ -1,0 +1,40 @@
+body {
+  background-color: #111;
+  color: #7E57C2;
+  font-family: "Fira Sans", serif;
+  margin: 0;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main a {
+  color: #fff;
+}
+/*anitation storyset*/
+svg#freepik_stories-developer-activity:not(.animated) .animable {
+  opacity: 0;
+}
+svg#freepik_stories-developer-activity.animated #freepik--Window--inject-1 {
+  animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) fadeIn,3s Infinite  linear floating;animation-delay: 0s,1s;
+}
+svg#freepik_stories-developer-activity.animated #freepik--Graphics--inject-1 {
+  animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp,6s Infinite  linear floating;animation-delay: 0s,1s;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}                    
+@keyframes floating {
+  0% {opacity: 1;transform: translateY(0px);}
+  50% {transform: translateY(-10px);}                
+  100% {opacity: 1; transform: translateY(0px);}
+}                    
+@keyframes slideUp {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1;transform: inherit;}
+}

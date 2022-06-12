@@ -1,0 +1,13 @@
+.habilidades {
+  padding: 80px 0px;
+  text-align: center;
+}
+.habilidades li {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 16px;
+  background-color: #222;
+  border-radius: 4px;
+  color: #fff;
+}
