@@ -1,8 +1,11 @@
 /* @import "global/inwork.css"; */
 @import "global/global.css";
 @import "global/footer.css";
+@import "global/header.css";
 
 @import "home/intro.css";
 @import "home/projetos.css";
 @import "home/habilidades.css";
 
+@import "componentes/fontes.css";
+@import "componentes/cores.css";
