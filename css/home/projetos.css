@@ -33,7 +33,7 @@
   filter: brightness(.3);
   object-position: top;
   height: 500px;
-  /* transition: .8s ease-in; */
+  transition: .8s ease-in;
 }
 .projetos-lista img:hover {
   filter: brightness(.3) blur(3px);
