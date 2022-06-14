@@ -1,7 +1,7 @@
-.projetos {
+.projetos-bg {
   text-align: center;
   color: #fff;
-  padding: 40px 0px;
+  padding: 80px 0px;
   background: #0d0d0d;
 }
 
@@ -10,6 +10,7 @@
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   padding: 40px 0px;
+  overflow-y: auto;
 }
 
 .projetos-lista li {
@@ -17,6 +18,7 @@
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  min-width: 320px;
 }
 
 .projetos-lista h2 {
@@ -31,7 +33,7 @@
   filter: brightness(.3);
   object-position: top;
   height: 500px;
-  transition: .8s ease-in;
+  /* transition: .8s ease-in; */
 }
 .projetos-lista img:hover {
   filter: brightness(.3) blur(3px);

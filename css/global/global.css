@@ -32,3 +32,15 @@ img {
   padding-left: 16px;
   padding-right: 16px;
 }
+
+.link {
+  display: inline-block;
+  background-color: var(--w);
+  color: var(--cp1);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .3s ease-in-out;
+}
+.link:hover {
+  background-color: var(--c4);
+}
