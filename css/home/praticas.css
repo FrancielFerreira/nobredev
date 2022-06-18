@@ -20,3 +20,10 @@
   align-items: center;
   justify-items: center;
 }
+
+@media (max-width: 998px) {
+  .praticas ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
