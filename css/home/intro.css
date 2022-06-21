@@ -6,7 +6,6 @@
 .intro {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  /* text-align: right; */
   padding: 40px 0px;
   align-items: center;
   min-height: 90vh;
@@ -14,4 +13,11 @@
 
 .intro-img {
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .intro-txt {order: 1;}
 }

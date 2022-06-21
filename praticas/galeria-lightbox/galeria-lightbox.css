@@ -4,6 +4,17 @@
   margin: 0;
 }
 
+.btn-back-home {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 32px;
+  background-color: #222;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .loader_bg{
   position: fixed;
   z-index: 999999;

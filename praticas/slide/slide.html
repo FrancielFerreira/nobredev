@@ -5,11 +5,68 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slide</title>
+  <title>Slide with Controls and Dots</title>
   <link rel="stylesheet" href="slide.css">
 </head>
 
 <body>
+
+  <div class="carrosel-container">
+
+    <ul class="carrosel-lista">
+      <li class="carrousel-item ativo">
+
+        <picture class="carrosel-img">
+          <img src="https://picsum.photos/id/1060/1900/1080" alt="foto 1" />
+        </picture>
+
+        <div class="carrosel-txt">
+          <h1>Titulo aqui</h1>
+          <p>descricao aqui</p>
+          <a href="#">CTA</a>
+        </div>
+
+      </li>
+
+      <li class="carrousel-item">
+
+        <picture class="carrosel-img">
+          <img src="https://picsum.photos/id/225/1900/1080" alt="foto 2" />
+        </picture>
+
+        <div class="carrosel-txt">
+          <h1>Titulo aqui</h1>
+          <p>descricao aqui</p>
+          <a href="#">CTA</a>
+        </div>
+
+      </li>
+
+      <li class="carrousel-item">
+
+        <picture class="carrosel-img">
+          <img src="https://picsum.photos/id/366/1900/1080" alt="foto 3" />
+        </picture>
+
+        <div class="carrosel-txt">
+          <h1>Titulo aqui</h1>
+          <p>descricao aqui</p>
+          <a href="#">CTA</a>
+        </div>
+
+      </li>
+    </ul>
+    <div class="carrosel-btn">
+      <button type="button" class="btn-voltar">&lang;</button>
+      <button type="button" class="btn-proximo">&rang;</button>
+    </div>
+    <div class="carrosel-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
 
   <script src="slide.js"></script>
 
