@@ -5,6 +5,7 @@
 .habilidades {
   padding: 80px 0px;
   text-align: center;
+  color: #fff;
 }
 .habilidades-lista {
   display: flex;
@@ -18,6 +19,5 @@
   padding: 32px 64px;
   background-color: #222;
   border-radius: 4px;
-  color: #fff;
   max-width: 200px;
 }
