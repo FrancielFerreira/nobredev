@@ -1,5 +1,5 @@
 .titulo-g1 {
-  font: 600 1rem "Fira Sans", sans-serif;
+  font: 500 3rem "Fira Sans", sans-serif;
 }
 .titulo-g2 {
   font-size: 5rem;
@@ -7,15 +7,12 @@
 .titulo-g3 {
   font: 500 3rem "Fira Sans", sans-serif;
 }
-h1 {
-  font: 500 3rem "Fira Sans", sans-serif;
-}
 
 .texto-g1 {
   font: 500 1rem "Fira Sans", sans-serif;
 }
 .texto-g2 {
-  font: 500 2rem "Fira Sans", sans-serif;
+  font: 400 2rem "Fira Sans", sans-serif;
 }
 
 .link {

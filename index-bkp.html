@@ -30,16 +30,22 @@
   </header>
 
   <main class="intro-bg">
-    <div class="intro container">
-      <div class="intro-content">
-        <h1 class="titulo-g1">Desenvolvedor Front-End &<br>UI | UX Designer<br>
-          <span class="texto-g2">Franciel Ferreira</span>
-        </h1>
-        <span>27 Anos, Brasília - DF</span>
+
+    <div class="container intro">
+
+      <div class="intro-txt">
+        <h1>NobreDev | Portfólio</hh1>
+          <h2>Desenvolvedor Front End</h2>
+          <p>HTML, CSS e JavaScript</p>
+          <span>27 Anos, DF</span>
       </div>
+
       <div class="intro-img">
-        <img src="img/perfil.png" alt="franciel ferreira" width="400" height="387">
+        <picture>
+          <img src="img/home/Website Creator-bro.svg" width="1000" height="1000" alt="foto de Perfil">
+        </picture>
       </div>
+
     </div>
 
   </main>
@@ -122,3 +128,29 @@
 </body>
 
 </html>
+
+<style>
+  .intro-bg::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -40px;
+    right: -120px;
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+  }
+
+  .intro-bg::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -80px;
+    left: -40px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+  }
+</style>

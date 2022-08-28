@@ -11,3 +11,46 @@
 /* body *:not(.header-menu) {
   filter: blur(2px);
 } */
+.header {
+  position: fixed;
+  background-color: var(--b);
+  width: 100%;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--w);
+  padding: 12px 0;
+  z-index: 9;
+}
+
+.header-menu h1 {
+  font-size: 3rem;
+}
+
+.navmenu {
+  display: flex;
+  gap: 16px
+}
+
+.navmenu a {
+  text-transform: uppercase;
+  font-size: .875rem;
+  padding: 16px 0;
+  position: relative;
+}
+
+.navmenu a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: var(--w);
+  transition: .4s;
+}
+.navmenu a:hover:after {
+  width: 100%;
+}
