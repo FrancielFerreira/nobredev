@@ -15,6 +15,7 @@
   position: fixed;
   background-color: var(--b);
   width: 100%;
+  z-index: 9;
 }
 
 .header-menu {
@@ -23,16 +24,21 @@
   align-items: center;
   color: var(--w);
   padding: 12px 0;
-  z-index: 9;
 }
 
 .header-menu h1 {
   font-size: 3rem;
 }
 
+.menu {
+  display: flex;
+  gap: 16px;
+}
+
 .navmenu {
   display: flex;
-  gap: 16px
+  gap: 16px;
+  align-items: center;
 }
 
 .navmenu a {
@@ -53,4 +59,14 @@
 }
 .navmenu a:hover:after {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header-menu h1 {
+    font-size: 3rem;
+    font-size: 1.5rem;
+  }
+  .navmenu {
+    display: none;
+  }
 }

@@ -21,12 +21,14 @@
   min-width: 320px;
 }
 
-.projetos-lista h2 {
-  font: 400 1rem/1.25 "Fira Code";
+.projetos-lista .projeto-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+}
+.projeto-content h2 {
+  margin-bottom: 20px;
 }
 
 .projetos-lista img {

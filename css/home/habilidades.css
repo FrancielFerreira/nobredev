@@ -1,23 +1,27 @@
 .habilidades-bg {
-  background: #111;
+  background: transparent;
 }
 
 .habilidades {
-  padding: 80px 0px;
-  text-align: center;
+  padding: 120px 0px;
   color: #fff;
 }
+
+.habilidades h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .habilidades-lista {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
-  gap: 8px;
+  gap: 20px;
 }
-.habilidades li {
-  flex: 1 2 100px;
-  margin: 0;
-  padding: 32px 64px;
+.habilidades-lista div {
+  width: 100%;
+  flex: 1;
+  padding: 32px;
   background-color: #222;
   border-radius: 4px;
-  max-width: 200px;
+  min-height: 400px;
 }
