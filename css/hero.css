@@ -1,0 +1,99 @@
+#hero {
+  background: url('/assets/img/bg.png') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  gap: 40px;
+  padding: 120px 20px 80px;
+}
+
+.hero-container::before {
+  content: "";
+  background-color: var(--secondary-color);
+  display: block;
+  width: 860px;
+  height: 860px;
+  position: absolute;
+  top: -170px;
+  z-index: -1;
+  right: -230px;
+  transform: rotate(7deg);
+  border-radius: 50px;
+}
+.hero-content:nth-child(1) {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+.hero-content > h1 {
+  color: var(--primary-color);
+}
+.hero-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero-profile-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+}
+.hero-social {
+  display: flex;
+  gap: 12px;
+  padding-top: 20px;
+}
+
+
+/* stacks */
+.hero-content:nth-child(2) {
+  position: relative;
+}
+.hero-destaques {
+  margin-bottom: 20px;
+}
+.hero-destaques li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-destaques li::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-image: url(./../assets/icons/material-symbols_check-box.png);
+}
+.hero-stack h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.hero-stack .stacks {
+  font-size: 1.5rem;
+}
+.hero-stack p a {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+  .hero-profile-photo img {
+    width: 120px;
+    height: 120px;
+  }
+  .hero-social {
+    padding-top: 8px;
+  }
+}

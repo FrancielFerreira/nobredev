@@ -1,153 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This is my portfolio">
   <title>NobreDev | Portfólio</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body id="index">
+<body>
 
-  <header class="header">
-    <div class="container header-menu">
-      <div class="logo">
-        <h1>NobreDev</h1>
+  <main id="hero">
+    <div class="hero-container container">
+
+      <div class="hero-content">
+        <div class="heto-cta">
+          <h1 class="titulo-xl">Desenvolvedor Front-End</h1>
+          <p>Gostaria de me conhecer melhor e conversar sobre meu trabalho?</p>
+          <a href="#" class="btn">Vamos tomar um café</a>
+        </div>
+
+        <div class="hero-info">
+          <div class="hero-profile-photo">
+            <img src="assets/img/perfil.png" alt="Franciel">
+          </div>
+          <div>
+            <h2>Franciel Ferreira</h2>
+            <p>28 anos, Brasília</p>
+            <div class="hero-social">
+              <a href="https://github.com/FrancielFerreira" target="_blank"><img src="assets/icons/mdi_github.png" alt="GitHub"></a>
+              <a href="https://www.linkedin.com/in/franciel-ferreira/" target="_blank"><img src="assets/icons/mdi_linkedin.png" alt="LinkedIn"></a>
+              <a href="https://www.instagram.com/franciel_ferreira/" target="_blank"><img src="assets/icons/ri_instagram-fill.png" alt="Instagram"></a>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="titulo">&lt;NobreDev/&gt;</h1>
       </div>
-      <div class="menu" <nav>
-        <ul class="navmenu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
+
+      <div class="hero-content">
+        <ul class="hero-destaques">
+          <li>+ 3 anos de experiência</li>
+          <li>+ 300 projetos publicados</li>
         </ul>
-        </nav>
-        <a class="link" href="https://api.whatsapp.com/send?phone=5561999951443" target="_blank">Vamos tomar um café?</a>
+
+        <div class="hero-stack">
+          <h2>Tecnologias</h2>
+          <p class="stacks">HTML, CSS, JavaScript, React, NodeJS, Firebase, jQuery, Wordpress (PHP), Figma e Protoshop</p>
+          <a href="#" class="btn-alt">Baixar CV</a>
+          <p>Precisa imprimir o currículo? Baixe <a href="#">aqui</a> uma versão otimizada para impressão</p>
+        </div>
+
       </div>
     </div>
-  </header>
-
-  <main class="intro-bg" id="home">
-    <div class="intro container">
-      <div class="intro-content">
-        <h1 class="titulo">Desenvolvedor Front-End & <span>UI | UX Designer</span>
-        </h1>
-        <h2 class="texto-alt">Franciel Ferreira</h2>
-        <p class="texto">27 Anos, Brasília - DF</p>
-        <a class="link" href="https://api.whatsapp.com/send?phone=5561999951443" target="_blank">Vamos tomar um café?</a>
-        <a class="link-alt" href="#portfolio">Como eu posso te ajudar!</a>
-      </div>
-      <div class="intro-img">
-        <img src="img/perfil.png" alt="franciel ferreira" width="400" height="387">
-      </div>
-    </div>
-
   </main>
 
-  <article class="sobre-bg" id="sobre">
-    <div class="container sobre">
+  <section class="projetos-bg" id="portfolio">
 
-      <div class="sobre-img">
-        <img src="img/sobre 1.jpg" alt="franciel ferreira" width="460" height="518">
-      </div>
-      <div class="sobre-content">
-        <h1 class="titulo">Sobre</h1>
-        <p class="texto-alt">Olá, eu me chamo Franciel, tenho 27 anos e moro em Brasilia - DF. Eu estou atuando na área de desenvolvimento web a mais de 3 anos, e possuo mais 150 sites publicados.</p>
-        <a class="link-alt" href="#">Saiba um pouco mais</a>
-        <a class="link" href="https://bit.ly/curriculum-figma-franciel-ferreira" target="_blank">Baixar CV</a>
-      </div>
+    <div class="container">
+      <h1 class="titulo-xl">Projetos</h1>
+
+      <section class="projetos">
+
+        <article>
+          <a href="https://brioodontologia.com.br/" target="_blank" rel="nofolow noreferrer">
+            <h2>Brio Odontologia</h2>
+            <img src="./assets/img/site-brio-odontologia.jpg" alt="Brio Odontologia">
+          </a>
+        </article>
+
+        <article>
+          <a href="https://www.clinicascan.com.br/" target="_blank" rel="nofolow noreferrer">
+            <h2>Clínica Scan</h2>
+            <img src="./assets/img/clinica-scan.jpg" alt="Clinica Scan">
+          </a>
+        </article>
+
+      </section>
     </div>
 
-  </article>
+  </section>
 
-  <article class="habilidades-bg" id="skills">
-    <div class="container habilidades">
-
-      <h1 class="titulo">Habilidades</h1>
-
-      <ul class="habilidades-lista">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>WordPress</li>
-        <li>JQuery</li>
-        <li>Bootstrap</li>
-        <li>Figma</li>
-        <li>Photoshop</li>
-        <li>React</li>
-      </ul>
-
-    </div>
-
-  </article>
-
-  <article class="projetos-bg" id="portfolio">
-
-    <div class="container projetos">
-      <h1 class="titulo">Projetos</h1>
-
-      <ul class="projetos-lista">
-        <li>
-          <img src="img/screens/lazerpetstop.com.br_.jpg" alt="">
-          <div class="projeto-content">
-
-            <h2 class="titulo-alt2">Lazer Pet Stop</h2>
-            <a href="https://lazerpetstop.com.br/" target="_blank" class="link">Confira</a>
-          </div>
-        </li>
-        <li>
-          <img src="img/screens/olhonofuturo.com.br_.jpg" alt="">
-          <div class="projeto-content">
-          <h2 class="titulo-alt2">De olho no Futuro</h2>
-          <a href="https://olhonofuturo.com.br/" target="_blank" class="link">Confira</a>
-        </div>
-        </li>
-        <li>
-          <img src="img/screens/usf-lab.org.jpg" alt="">
-          <div class="projeto-content">
-          <h2 class="titulo-alt2">UsF Lab</h2>
-          <a href="http://usf-lab.org/" target="_blank" class="link">Confira</a>
-        </div>
-        </li>
-      </ul>
-
-    </div>
-  </article>
-
-  <article class="praticas container" id="praticas">
-    <h1 class="titulo">Práticas</h1>
-
-    <ul>
-      <li>
-        <h2 class="texto-alt">Galeria com LightBox</h2>
-        <a href="praticas/galeria-lightbox/galeria-lightbox.html" class="link">Testar</a>
-      </li>
-      <li>
-        <h2 class="texto-alt">Slide com Controles</h2>
-        <a href="praticas/slide/slide.html" class="link">Testar</a>
-      </li>
-      <li>
-        <h2 class="texto-alt">Formulário com máscara de CPF</h2>
-        <a href="praticas/formulario/formulario.html" class="link">Testar</a>
-      </li>
-      <li>
-        <h2>FAQ com CSS puro</h2>
-        <a href="praticas/faq-css/faq.html" class="link">Testar</a>
-      </li>
-      <li>
-        <h2 class="texto-alt">Em breve...</h2>
-      </li>
-    </ul>
-  </article>
-
-
-  <footer>
-    <p>2022 &copy - Alguns direitos reservados!</p>
-
-  </footer>
 </body>
 
 </html>

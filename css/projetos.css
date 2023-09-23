@@ -1,0 +1,25 @@
+.projetos-bg {
+  padding: 80px 0;
+}
+
+.projetos-bg h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projetos {
+  display: grid;
+  gap: 40px;
+}
+
+.projetos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  .projetos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
