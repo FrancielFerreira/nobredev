@@ -1,0 +1,25 @@
+.portfolio-bg {
+  padding: 80px 0;
+}
+
+.portfolio-bg h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portfolio {
+  display: grid;
+  gap: 40px;
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    grid-template-columns: 1fr 1fr;
+  }
+}
