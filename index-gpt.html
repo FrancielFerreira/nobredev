@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Franciel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: #222;
+        background: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        z-index: 10;
+      }
+
+      header .logo {
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: #f97316;
+      }
+
+      header nav a {
+        margin-left: 20px;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      header nav a:hover {
+        color: #f97316;
+      }
+
+      /* Hero */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 8%;
+        flex-wrap: wrap;
+      }
+
+      .hero-text {
+        max-width: 600px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+
+      .hero-text h1 span {
+        color: #f43f5e;
+      }
+
+      .hero-text p {
+        margin-bottom: 20px;
+        color: #444;
+      }
+
+      .hero-text .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        background: #f97316;
+        color: #fff;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .hero-text .btn:hover {
+        background: #ea580c;
+      }
+
+      .hero img {
+        width: 280px;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+
+      /* Habilidades */
+      .skills {
+        background: #111;
+        color: #fff;
+        padding: 60px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        margin: 60px 8%;
+      }
+
+      .skills-content {
+        max-width: 600px;
+      }
+
+      .skills h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .skills ul {
+        list-style: none;
+      }
+
+      .skills ul li {
+        margin-bottom: 10px;
+      }
+
+      .skills img {
+        width: 220px;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+
+      /* Experiências */
+      .experience {
+        padding: 60px 8%;
+      }
+
+      .experience h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+
+      .timeline {
+        border-left: 3px solid #f97316;
+        padding-left: 20px;
+      }
+
+      .timeline-item {
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      .timeline-item::before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        background: #f97316;
+        border-radius: 50%;
+        position: absolute;
+        left: -29px;
+        top: 5px;
+      }
+
+      .timeline-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .timeline-item span {
+        display: block;
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      /* Portfólio */
+      .portfolio {
+        padding: 60px 8%;
+      }
+
+      .portfolio h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        background: #fff;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .card-body h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+
+      .card-body p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      .card-body a {
+        display: inline-block;
+        padding: 8px 14px;
+        background: #f43f5e;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #666;
+        border-top: 1px solid #eee;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">&lt;Nobredev/&gt;</div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#portfolio">Portfólio</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="sobre">
+      <div class="hero-text">
+        <h1>Eu sou <span>Franciel</span>, Desenvolvedor Web</h1>
+        <p>
+          Desenvolvedor Web com mais de 5 anos de experiência na criação de
+          interfaces intuitivas e funcionais. Especialista em WordPress, e
+          também em HTML, CSS, JavaScript, React e Vue.js.
+        </p>
+        <a href="#" class="btn">Vamos tomar um café?</a>
+      </div>
+      <img src="https://via.placeholder.com/280x320.png" alt="Franciel" />
+    </section>
+
+    <!-- Habilidades -->
+    <section class="skills" id="habilidades">
+      <div class="skills-content">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>WordPress (Elementor, ACF, Jet Engine)</li>
+          <li>Front-end: HTML, CSS, JavaScript, React, Vue.js</li>
+          <li>Back-end: PHP, Ruby on Rails</li>
+          <li>Infra: Docker, MySQL, PostgreSQL</li>
+          <li>Ferramentas: Git, APIs REST, SEO</li>
+        </ul>
+      </div>
+      <img src="https://via.placeholder.com/220x260.png" alt="Franciel" />
+    </section>
+
+    <!-- Experiência -->
+    <section class="experience" id="experiencia">
+      <h2>Experiências</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>NerdStudios - Web Designer</h3>
+          <span>Abr/2024 - atualmente</span>
+          <p>
+            Criação e manutenção de sites usando WordPress, Elementor, Jet
+            Engine, WooCommerce e APIs.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>C7TI - Web Designer</h3>
+          <span>Set/2020 - Mar/2024</span>
+          <p>
+            Desenvolvimento de sites usando HTML, CSS, JavaScript, Bootstrap e
+            integração com APIs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section class="portfolio" id="portfolio">
+      <h2>Portfólio</h2>
+      <div class="portfolio-grid">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png" alt="Projeto" />
+          <div class="card-body">
+            <h3>DezNoventa</h3>
+            <p>
+              Projeto desenvolvido em parceria com a Amnax, envolvendo Ruby on
+              Rails e Vue.js.
+            </p>
+            <a href="#">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png" alt="Projeto" />
+          <div class="card-body">
+            <h3>Menu Online</h3>
+            <p>Aplicação de pedidos online com integração via WhatsApp.</p>
+            <a href="#">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png" alt="Projeto" />
+          <div class="card-body">
+            <h3>Soltec Engenharia</h3>
+            <p>Website institucional para construtora, utilizando WordPress.</p>
+            <a href="#">Acessar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png" alt="Projeto" />
+          <div class="card-body">
+            <h3>Clínica San</h3>
+            <p>Site institucional com painel administrativo personalizado.</p>
+            <a href="#">Acessar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>&lt;Nobredev/&gt; © 2025 - Todos os direitos reservados.</footer>
+  </body>
+</html>

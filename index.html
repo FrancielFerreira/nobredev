@@ -1,98 +1,193 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NobreDev | Portfólio</title>
-
-  <!-- css -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <main>
-    <div id="hero">
-      <section class="hero-container container">
-
-        <div class="hero-content">
-          <div class="heto-cta">
-            <h1 class="titulo-xl">Desenvolvedor Web</h1>
-            <p>Gostaria de me conhecer melhor e conversar sobre meu trabalho?</p>
-            <a href="https://api.whatsapp.com/send?phone=5561999951443" target="_blank" class="btn">Vamos tomar um café</a>
-          </div>
-
-          <div class="hero-info">
-            <div class="hero-profile-photo">
-              <img src="assets/img/franciel-ferreira-perfil.png" alt="Franciel">
-            </div>
-            <div>
-              <h2>Franciel Ferreira</h2>
-              <p>28 anos, Brasília</p>
-              <div class="hero-social">
-                <a href="https://github.com/FrancielFerreira" target="_blank"><img src="assets/icons/mdi_github.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/franciel-ferreira/" target="_blank"><img src="assets/icons/mdi_linkedin.png" alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/franciel_ferreira/" target="_blank"><img src="assets/icons/ri_instagram-fill.png" alt="Instagram"></a>
-              </div>
-            </div>
-          </div>
-
-          <h1 class="titulo">&lt;NobreDev/&gt;</h1>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franciel - Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#">&lt;Nobredev /&gt;</a>
         </div>
+        <ul class="nav-links">
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="hero-content">
-          <ul class="hero-destaques">
-            <li>+ 3 anos de experiência</li>
-            <li>+ 300 projetos publicados</li>
-          </ul>
+    <main>
+      <section class="hero" id="hero">
+        <h1>Eu sou Franciel, <br />Desenvolvedor Web</h1>
+        <p>
+          Desenvolvedor Web com mais de 5 anos de experiência na criação de
+          interfaces intuitivas e funcionais. Especialista em WordPress, atuo
+          desde a concepção até a implementação de projetos. Sou proficiente em
+          PHP, JavaScript, e outras linguagens e frameworks como HTML, CSS,
+          Bootstrap, React e Vue.js. Tenho experiência no desenvolvimento de
+          layouts personalizados usando Elementor, ACF e Jet Engine, e também
+          com UI/UX, prototipagem e integração de APIs.
+        </p>
+        <a href="https://wa.me/556199951443" target="_blank" class="btn"
+          >Vamos tomar um café?</a
+        >
+      </section>
 
-          <div class="hero-stack">
-            <h2>Tecnologias</h2>
-            <p class="stacks">HTML, CSS, JavaScript, React, NodeJS, Firebase, jQuery, Wordpress (PHP), Figma e Photoshop</p>
-            <a href="https://drive.google.com/file/d/1LB-H-lbA3jIHS0revmjIgbrAbvFaCt7H/view?usp=sharing" class="btn-alt" target="_blank">Baixar CV</a>
+      <section class="habilidades" id="habilidades">
+        <div class="container">
+          <div class="habilidades-content">
+            <h2>Habilidades</h2>
+            <p>
+              Desde 2019, atuo como freelancer, desenvolvendo sites e sistemas
+              web. Minha experiência abrange:
+            </p>
+            <ul>
+              <li>
+                <strong>WordPress:</strong> Criação de temas personalizados
+                (Elementor, ACF, Jet Engine) e desenvolvimento de APIs
+              </li>
+              <li>
+                <strong>Front-End:</strong> HTML, CSS, JavaScript, jQuery,
+                Bootstrap, Tailwind, React, Vue.js.
+              </li>
+              <li><strong>Back-End:</strong> Node.js, PHP, Ruby on Rails.</li>
+              <li><strong>Design & UI/UX:</strong> Figma, Photoshop, Canva.</li>
+              <li>
+                <strong>Infraestrutura:</strong> Docker, AWS, MySQL, PostgreSQL.
+              </li>
+              <li><strong>DevOps:</strong> Automação (CI/CD).</li>
+              <li>
+                <strong>Ferramentas:</strong> Git/GitHub, APIs REST, SEO, Google
+                e Meta Tags.
+              </li>
+            </ul>
           </div>
-
+          <div class="habilidades-imagem">
+            <img src="/assets/img/foto-pessoal 1.jpg" alt="Franciel Ferreira" />
+          </div>
         </div>
       </section>
-    </div>
-    <section class="portfolio-bg" id="portfolio">
 
-      <div class="container">
-        <h1 class="titulo-xl">Portfólio</h1>
+      <section class="experiencias" id="experiencia">
+        <h2>Experiências</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>NerdStudios</h3>
+            <p>Web Designer</p>
+            <span>(Abr/2024 - atualmente)</span>
+            <p class="descricao">
+              Criação e manutenção de sites usando Wordpress, com Elementor, Jet
+              Engine, CrocoBlock, Woocommerce, e com foco em uso de ferramentas
+              de Inteligência Artificial (I.A) como ChatGPT para criação de
+              conteúdo, além de Photoshop e Figma para tratamento de imagens e
+              protótipos.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>C2TI</h3>
+            <p>Web Designer</p>
+            <span>(Jan/2024 - Mar/2024)</span>
+            <p class="descricao">
+              Desenvolvimento de sites usando HTML, CSS, JavaScript, jQuery,
+              Bootstrap, além de criação as artes gráficas com Photoshop, Canva
+              e Figma, durante essa parceria alcançamos a incrível marca de mais
+              de 400 sites entregues.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="portfolio">
+      <section class="portfolio" id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="grid-projetos">
+          <div class="projeto main-projeto">
+            <img src="/assets/img/clinica-scan.jpg" alt="Projeto DezNoventa" />
+            <div>
+              <h3>DezNoventa</h3>
+              <p>
+                Projeto desenvolvido em parceria com a Ammax, nesse projeto
+                precisei atualizar algumas funções do painel administrativo e
+                criar novas rotas na api, bem como configurar um novo servidor
+                do zero na aws pois estava hospedado em uma máquina quenão
+                recebia mais manutenção.
+              </p>
+              <p>
+                Posso afirmar que esse é o projeto mais desafiador da minha
+                carreira, me tirou completamente da zona de conforto, exigindo o
+                uso de tecnologias que eu ainda não dominava, como Ruby on Rails
+                (API), Vue.js (Frontend e Painel Administrativo), Docker e AWS
+              </p>
+              <a href="https://deznoventa.com.br/" target="_blank" class="btn"
+                >Acessar</a
+              >
+            </div>
+          </div>
+          <div class="projeto">
+            <img src="/assets/img/clinica-scan.jpg" alt="Projeto Menu Online" />
+            <h3>Menu Online</h3>
+            <p>
+              Site desenvolvido como projeto pessoal para vender um sistema de
+              pedidos por WhatsApp para lanchonetes, com HTML, CSS, JavaScript,
+              jQuery e Bootstrap é integração com a API dos Correios para
+              entrega.
+            </p>
+            <a
+              href="https://menu-online-iota.vercel.app/"
+              target="_blank"
+              class="btn"
+              >Acessar</a
+            >
+          </div>
+          <div class="projeto">
+            <img
+              src="/assets/img/clinica-scan.jpg"
+              alt="Projeto Soltec Engenharia"
+            />
+            <h3>Soltec Engenharia</h3>
+            <p>
+              Site desenvolvido para a Soltec Engenharia em parceria com a
+              Ammax, com WordPress, Elementor, ACF, para gerenciamento e
+              cadastro dos imóveis da empresa, além de integração com o a API do
+              CRM ANAPRO.
+            </p>
+            <a href="https://soltecengenharia.com.br/" class="btn">Acessar</a>
+          </div>
+          <div class="projeto">
+            <img
+              src="/assets/img/clinica-scan.jpg"
+              target="_blank"
+              alt="Projeto línica Scan"
+            />
+            <h3>Clínica Scan</h3>
+            <p>
+              Site desenvolvido para a clínica Scan em parceria com a DriftWeb,
+              com base em um protótipo Figma, criei o layout com Elementor, e
+              ACF para deixar o site totalmente personalizável para o cliente
+              final.
+            </p>
+            <a
+              href="https://www.clinicascan.com.br/"
+              target="_blank"
+              class="btn"
+              >Acessar</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
-          <article>
-            <a href="https://brioodontologia.com.br/" target="_blank" rel="nofolow noreferrer">
-              <h2>Brio Odontologia</h2>
-              <img src="./assets/img/site-brio-odontologia.jpg" alt="Brio Odontologia">
-            </a>
-          </article>
-
-          <article>
-            <a href="https://www.clinicascan.com.br/" target="_blank" rel="nofolow noreferrer">
-              <h2>Clínica Scan</h2>
-              <img src="./assets/img/clinica-scan.jpg" alt="Clinica Scan">
-            </a>
-          </article>
-
-        </section>
-      </div>
-
-    </section>
-
-
-  </main>
-
-  <footer>
-    <p>© Todos os direitos reservados!</p>
-  </footer>
-</body>
-
+    <footer>
+      <p>&lt;sobredev /&gt; © 2025 - Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>

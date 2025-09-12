@@ -1,73 +1,47 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font: normal 1rem/1.25 "Fira Sans", sans-serif;
+/* Importação da fonte Fira Sans do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --cor-fundo: #f8f8f8;
+  --cor-fundo-dark: #111;
+  --cor-fundo-card: #ffffff;
+  --cor-texto: #333333;
+  --cor-texto-suave: #666666;
+  --cor-principal: #a629c2;
+  --cor-secundaria: #f57920;
+  --sombra-card: rgba(0, 0, 0, 0.08);
+  --fonte-principal: 'Fira Sans', sans-serif; /* Alterado para Fira Sans */
 }
 
 body {
-  overflow-x: hidden;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-ul {
-  list-style: none;
-  font: 400 1rem/1.25 "Fira Sans", sans-serif;
-}
-
-:root {
-  --primary-color: #A629C2;
-  --secondary-color: #F4DEF9;
-
-  --black: #111;
-  --white: #fff;
-}
-
-h2,
-.titulo {
-  font: bold 2rem/1.25 "Fira Code", sans-serif;
-}
-.titulo-xl {
-  font: bold 4rem/1.25 "Fira Code", sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .btn {
+  display: inline-block;
+  /* background-color: var(--cor-principal); */
+  background-image: linear-gradient(
+    to right,
+    var(--cor-principal),
+    var(--cor-secundaria)
+  ); /* Gradiente do Figma */
+  color: #fff;
   padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: var(--white);
-  border-radius: 4px;
-  margin-top: 20px;
-  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn-alt {
-  padding: 10px 20px;
-  background-color: var(transparent);
-  color: var(--primary-color);
-  border-radius: 4px;
-  margin: 20px 0;
-  border: 2px solid var(--primary-color);
+.btn-detalhes:hover {
+  background-color: #5b4ddc;
+  transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  h2 {
-    font-size: 1.25rem;
-  }
-  .titulo-xl {
-    font-size: 2rem;
-  }
+.shadow {
+  box-shadow: 0 0 20px var(--sombra-card);
 }
