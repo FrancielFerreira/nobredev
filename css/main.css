@@ -34,12 +34,17 @@ body {
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: transform 0.3s;
 }
 
-.btn-detalhes:hover {
-  background-color: #5b4ddc;
-  transform: translateY(-2px);
+.btn:hover {
+  background-image: linear-gradient(
+    to left,
+    var(--cor-secundaria),
+    var(--cor-principal),
+    var(--cor-secundaria)
+  ); /* Gradiente do Figma */
+  transform: translateY(-2px) scale(1.05);
 }
 
 .shadow {
