@@ -1,1 +1,6 @@
+node_modules/
+.DS_Store
+.env
 *.txt
+# Opcional: Se a Vercel fizer o build, podemos ignorar o output.css
+# assets/css/output.css

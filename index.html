@@ -4,209 +4,304 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Franciel - Portfólio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira Sans:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+      <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="text-xl font-bold text-primary-dark dark:text-primary-light">
           <a href="#">&lt;Nobredev /&gt;</a>
         </div>
-        <ul class="nav-links">
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="#habilidades" class="hover:text-primary-dark dark:hover:text-primary-light transition-colors">Habilidades</a></li>
+          <li><a href="#experiencia" class="hover:text-primary-dark dark:hover:text-primary-light transition-colors">Experiência</a></li>
+          <li><a href="#portfolio" class="hover:text-primary-dark dark:hover:text-primary-light transition-colors">Portfólio</a></li>
         </ul>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 transition-colors">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+          <a href="https://wa.me/556199951443" target="_blank" class="hidden sm:block px-5 py-2.5 text-sm font-medium text-white bg-primary-dark hover:bg-blue-700 rounded-lg transition-colors">Contato</a>
+        </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="hero">
-        <h1>Eu sou Franciel, <br />Desenvolvedor Web</h1>
-        <p>
-          Desenvolvedor Web versátil com mais de 5 anos de experiência. Minha
-          trajetória profissional me proporcionou um profundo conhecimento tanto
-          em desenvolvimento de código quanto em plataformas de gerenciamento de
-          conteúdo e e-commerce (CMS). <br /><br />
-          Sou especialista em WordPress layouts personalizados usando
-          ferramentas como Elementor, ACF e Jet Engine. Sou proficiente em
-          linguagens e frameworks como PHP, JavaScript, HTML, CSS, Bootstrap,
-          React e Vue.js. Minha experiência vai além, já tendo atuado em
-          projetos de Webflow, Wix, Nuvemshop e Shopify. Possuo também
-          competência em UI/UX, prototipagem e integração de APIs.
-        </p>
-        <a href="https://wa.me/556199951443" target="_blank" class="btn"
-          >Vamos tomar um café?</a
-        >
-      </section>
-
-      <section class="habilidades" id="habilidades">
-        <div class="container">
-          <div class="habilidades-content">
-            <h2>Habilidades</h2>
-            <p>
-              Desde 2019, atuo como freelancer, desenvolvendo sites e sistemas
-              web. Minha experiência abrange:
-            </p>
-            <ul>
-              <li>
-                <strong>WordPress:</strong> Elementor, ACF, Jet Engine, criação
-                de temas personalizados com PHP e desenvolvimento de APIs.
-              </li>
-              <li>
-                <strong>CMS:</strong> Tenho ampla experiência com as principais
-                plataformas do mercado, incluindo Webflow, Wix, Nuvemshop e
-                Shopify
-              </li>
-              <li>
-                <strong>Front-End:</strong> HTML, CSS, JavaScript, jQuery,
-                Bootstrap, Tailwind, React, Vue.js.
-              </li>
-              <li><strong>Back-End:</strong> Node.js, PHP, Ruby on Rails, Python.</li>
-              <li><strong>Design & UI/UX:</strong> Figma, Photoshop, Canva.</li>
-              <li>
-                <strong>Infraestrutura:</strong> Docker, AWS, MySQL, PostgreSQL.
-              </li>
-              <li><strong>DevOps:</strong> Automação (CI/CD).</li>
-              <li>
-                <strong>Ferramentas:</strong> Git/GitHub, APIs REST, SEO, Google
-                e Meta Tags.
-              </li>
-            </ul>
-          </div>
-          <div class="habilidades-imagem">
-            <img src="/assets/img/foto-pessoal 1.jpg" alt="Franciel Ferreira" />
+      <section class="py-20 lg:py-32" id="hero">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+            Eu sou Franciel, <br /><span class="text-primary-dark dark:text-primary-light">Desenvolvedor Web</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
+            Desenvolvedor Web versátil com mais de 5 anos de experiência. Especialista em 
+            <span class="font-semibold text-gray-900 dark:text-gray-100">WordPress</span>, 
+            <span class="font-semibold text-gray-900 dark:text-gray-100">PHP</span>, e 
+            <span class="font-semibold text-gray-900 dark:text-gray-100">JavaScript</span>. 
+            Focado em criar soluções eficientes e layouts personalizados que impactam negócios.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://wa.me/556199951443" target="_blank" class="px-8 py-4 text-lg font-semibold text-white bg-primary-dark hover:bg-blue-700 rounded-full shadow-lg hover:shadow-xl transition-all">
+              Vamos tomar um café?
+            </a>
+            <a href="#portfolio" class="px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-all">
+              Ver Projetos
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="experiencias" id="experiencia">
-        <h2>Experiências</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>MAVERICK 360</h3>
-            <p>Desenvolvedor full stack</p>
-            <span>(Nov/2025 - Atualmente)</span>
-            <p class="descricao">
-              Atuação como Desenvolvedor Full Stack, focado na construção,
-              evolução e otimização de sites e aplicações web. Experiência com
-              WordPress, WooCommerce e Webflow, incluindo desenvolvimento de
-              plugins, customizações em PHP, integrações com APIs, implementação
-              de soluções com JavaScript e automações em Python para cadastro e
-              gestão de produtos no WooCommerce. Gestão de infraestrutura em
-              nuvem (AWS) e servidores como Hostinger e TurboCloud, garantindo
-              performance, segurança, escalabilidade e automação de processos.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h3>NerdStudio</h3>
-            <p>Web Designer</p>
-            <span>(Abr/2024 - Out/2025)</span>
-            <p class="descricao">
-              Criação e manutenção de sites usando Wordpress, com Elementor, Jet
-              Engine, CrocoBlock, Woocommerce, e com foco em uso de ferramentas
-              de Inteligência Artificial (I.A) como ChatGPT para criação de
-              conteúdo, além de Photoshop e Figma para tratamento de imagens e
-              protótipos.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h3>C2TI</h3>
-            <p>Web Designer</p>
-            <span>(Set/2020 - Mar/2024)</span>
-            <p class="descricao">
-              Desenvolvimento de sites usando HTML, CSS, JavaScript, jQuery,
-              Bootstrap, além de criação as artes gráficas com Photoshop, Canva
-              e Figma, durante essa parceria alcançamos a incrível marca de mais
-              de 400 sites entregues.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="portfolio" id="portfolio">
-        <h2>Portfólio</h2>
-        <div class="grid-projetos">
-          <div class="projeto main-projeto">
-            <img src="/assets/img/dz.png" alt="Projeto DezNoventa" />
-            <div>
-              <h3>DezNoventa</h3>
-              <p>
-                Projeto desenvolvido em parceria com a Ammax, nesse projeto
-                precisei atualizar algumas funções do painel administrativo e
-                criar novas rotas na api, bem como configurar um novo servidor
-                do zero na aws pois estava hospedado em uma máquina quenão
-                recebia mais manutenção.
+      <section class="py-20 bg-gray-50 dark:bg-gray-800/50" id="habilidades">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6">Habilidades</h2>
+              <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                Desde 2019, atuo como desenvolvedor criando sites e sistemas web robustos. Minha experiência abrange desde o design intuitivo até a infraestrutura escalável.
               </p>
-              <p>
-                Posso afirmar que esse é o projeto mais desafiador da minha
-                carreira, me tirou completamente da zona de conforto, exigindo o
-                uso de tecnologias que eu ainda não dominava, como Ruby on Rails
-                (API), Vue.js (Frontend e Painel Administrativo), Docker e AWS
-              </p>
-              <a href="https://deznoventa.com.br/" target="_blank" class="btn"
-                >Acessar</a
-              >
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                <div class="space-y-4">
+                  <div>
+                    <h3 class="font-bold text-primary-dark dark:text-primary-light mb-1">WordPress & CMS</h3>
+                    <p>Elementor, ACF, Jet Engine, Webflow, Shopify.</p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary-dark dark:text-primary-light mb-1">Front-End</h3>
+                    <p>React, Vue.js, Tailwind CSS, JavaScript (ES6+).</p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary-dark dark:text-primary-light mb-1">Back-End</h3>
+                    <p>Node.js, PHP, Python, Ruby on Rails.</p>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <div>
+                    <h3 class="font-bold text-primary-dark dark:text-primary-light mb-1">Design & UI/UX</h3>
+                    <p>Figma, Photoshop, Prototipagem.</p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary-dark dark:text-primary-light mb-1">Infra & DevOps</h3>
+                    <p>Docker, AWS, Git, CI/CD, MySQL/PostgreSQL.</p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary-dark dark:text-primary-light mb-1">Marketing & SEO</h3>
+                    <p>SEO, Google Tags, Meta Tags, APIs REST.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="/assets/img/foto-pessoal 1.jpg" alt="Franciel Ferreira" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 w-full max-w-md mx-auto" />
             </div>
           </div>
-          <div class="projeto">
-            <img src="/assets/img/mo.png" alt="Projeto Menu Online" />
-            <h3>Menu Online</h3>
-            <p>
-              Site desenvolvido como projeto pessoal para vender um sistema de
-              pedidos por WhatsApp para lanchonetes, com HTML, CSS, JavaScript,
-              jQuery e Bootstrap e integração com a API dos Correios para
-              entrega.
-            </p>
-            <a
-              href="https://menu-online-iota.vercel.app/"
-              target="_blank"
-              class="btn"
-              >Acessar</a
-            >
+        </div>
+      </section>
+
+      <section class="py-20" id="experiencia">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Experiência Profissional</h2>
+          <div class="relative border-l border-gray-200 dark:border-gray-700 ml-4 md:ml-0">
+            <!-- Timeline Item 1 -->
+            <div class="mb-12 ml-6">
+              <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-dark rounded-full -left-3 ring-8 ring-white dark:ring-gray-900">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+              </span>
+              <h3 class="flex items-center mb-1 text-xl font-semibold text-gray-900 dark:text-white">MAVERICK 360 <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">Atual</span></h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Novembro 2025 - Atualmente</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400 leading-relaxed">
+                Desenvolvedor Full Stack focado na construção e otimização de aplicações web. Experiência em WordPress, WooCommerce e Webflow, com foco em performance, segurança e integrações complexas.
+              </p>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="mb-12 ml-6">
+              <span class="absolute flex items-center justify-center w-6 h-6 bg-gray-200 dark:bg-gray-700 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900">
+                <svg class="w-3 h-3 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+              </span>
+              <h3 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">NerdStudio</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Abril 2024 - Outubro 2025</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400 leading-relaxed">
+                Web Designer focado em WordPress com Elementor, Jet Engine e integrações com I.A. para criação de conteúdo otimizado.
+              </p>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="ml-6">
+              <span class="absolute flex items-center justify-center w-6 h-6 bg-gray-200 dark:bg-gray-700 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900">
+                <svg class="w-3 h-3 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+              </span>
+              <h3 class="mb-1 text-xl font-semibold text-gray-900 dark:text-white">C2TI</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Setembro 2020 - Março 2024</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400 leading-relaxed">
+                Desenvolvimento em larga escala de sites (mais de 400 entregues) utilizando HTML, CSS, JavaScript (jQuery) e Bootstrap, além de design gráfico especializado.
+              </p>
+            </div>
           </div>
-          <div class="projeto">
-            <img src="/assets/img/se.png" alt="Projeto Soltec Engenharia" />
-            <h3>Soltec Engenharia</h3>
-            <p>
-              Site desenvolvido para a Soltec Engenharia em parceria com a
-              Ammax, com WordPress, Elementor, ACF, para gerenciamento e
-              cadastro dos imóveis da empresa, além de integração com o a API do
-              CRM ANAPRO.
-            </p>
-            <a href="https://soltecengenharia.com.br/" class="btn">Acessar</a>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gray-50 dark:bg-gray-800/50" id="portfolio">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Portfólio Selecionado</h2>
+          
+          <!-- Projetos em Destaque (Row 1: 2 colunas no desktop) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Projeto 1: DezNoventa -->
+            <div class="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col group transition-all duration-500 h-full">
+              <div class="h-64 overflow-hidden shrink-0">
+                <img src="/assets/img/dz.png" alt="Projeto DezNoventa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-8 flex flex-col flex-grow text-left">
+                <h3 class="text-2xl font-bold mb-4 text-primary-dark dark:text-primary-light">DezNoventa</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
+                  Um dos projetos mais desafiadores da minha carreira, onde precisei atualizar funções críticas no painel administrativo, criar novas rotas em Ruby on Rails e migrar toda a infraestrutura para um novo servidor na AWS usando Docker. O projeto utiliza Vue.js no frontend e exige alta performance e escalabilidade.
+                </p>
+                <div class="mt-auto">
+                  <a href="https://deznoventa.com.br/" target="_blank" class="inline-flex items-center font-bold text-primary-dark dark:text-primary-light hover:underline">
+                    Acessar Projeto <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projeto 2: World Automation Store -->
+            <div class="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col group transition-all duration-500 h-full">
+              <div class="h-64 bg-gray-200 dark:bg-gray-800 flex items-center justify-center overflow-hidden shrink-0">
+                <span class="text-gray-400 dark:text-gray-600 font-medium text-lg">Screenshot em breve</span>
+              </div>
+              <div class="p-8 flex flex-col flex-grow text-left">
+                <h3 class="text-2xl font-bold mb-4 text-primary-dark dark:text-primary-light">World Automation Store</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
+                  Atuo na manutenção contínua e evolução desta loja internacional. O grande destaque foi o desenvolvimento de uma automação customizada em Python integrada ao Google Sheets, que permitiu o cadastro e a gestão automatizada de mais de 7.000 produtos no ecossistema WooCommerce.
+                </p>
+                <div class="mt-auto">
+                  <a href="https://worldautomationstore.com/" target="_blank" class="inline-flex items-center font-bold text-primary-dark dark:text-primary-light hover:underline">
+                    Acessar Loja <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="projeto">
-            <img
-              src="/assets/img/clinica-scan.jpg"
-              alt="Projeto Clínica Scan"
-            />
-            <h3>Clínica Scan</h3>
-            <p>
-              Site desenvolvido para a clínica Scan em parceria com a DriftWeb,
-              com base em um protótipo Figma, criei o layout com Elementor, e
-              ACF para deixar o site totalmente personalizável para o cliente
-              final.
-            </p>
-            <a
-              href="https://www.clinicascan.com.br/"
-              target="_blank"
-              class="btn"
-              >Acessar</a
-            >
+
+          <!-- Outros Projetos (Row 2: 3 colunas no desktop) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            <!-- Menu Online -->
+            <div class="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 group transition-all duration-500 flex flex-col h-full">
+              <div class="h-48 overflow-hidden shrink-0">
+                <img src="/assets/img/mo.png" alt="Projeto Menu Online" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-6 flex flex-col flex-grow text-left">
+                <h3 class="text-xl font-bold mb-2">Menu Online</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
+                  Sistema de pedidos por WhatsApp integrado com API de Correios para lanchonetes.
+                </p>
+                <div class="mt-auto">
+                  <a href="https://menu-online-iota.vercel.app/" target="_blank" class="text-primary-dark dark:text-primary-light font-semibold hover:underline">Ver site</a>
+                </div>
+              </div>
+            </div>
+            <!-- Soltec Engenharia -->
+            <div class="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 group transition-all duration-500 flex flex-col h-full">
+              <div class="h-48 overflow-hidden shrink-0">
+                <img src="/assets/img/se.png" alt="Projeto Soltec Engenharia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-6 flex flex-col flex-grow text-left">
+                <h3 class="text-xl font-bold mb-2">Soltec Engenharia</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
+                  Portal imobiliário robusto com WordPress, ACF e integração com CRM ANAPRO.
+                </p>
+                <div class="mt-auto">
+                  <a href="https://soltecengenharia.com.br/" target="_blank" class="text-primary-dark dark:text-primary-light font-semibold hover:underline">Ver site</a>
+                </div>
+              </div>
+            </div>
+            <!-- Clínica Scan -->
+            <div class="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 group transition-all duration-500 flex flex-col h-full">
+              <div class="h-48 overflow-hidden shrink-0">
+                <img src="/assets/img/clinica-scan.jpg" alt="Projeto Clínica Scan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="p-6 flex flex-col flex-grow text-left">
+                <h3 class="text-xl font-bold mb-2">Clínica Scan</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
+                  Layout personalizado e otimizado para conversão em WordPress com Elementor.
+                </p>
+                <div class="mt-auto">
+                  <a href="https://www.clinicascan.com.br/" target="_blank" class="text-primary-dark dark:text-primary-light font-semibold hover:underline">Ver site</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&lt;nobredev /&gt; © 2025 - Todos os direitos reservados.</p>
+    <footer class="py-12 border-t border-gray-200 dark:border-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-500 dark:text-gray-400">&lt;nobredev /&gt; © 2025 - Todos os direitos reservados.</p>
+        <div class="flex justify-center space-x-6 mt-6">
+          <a href="https://github.com/FrancielFerreira" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <span class="sr-only">GitHub</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/francielferreira" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+      var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+      // Change the icons inside the button based on previous settings
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          themeToggleLightIcon.classList.remove('hidden');
+      } else {
+          themeToggleDarkIcon.classList.remove('hidden');
+      }
+
+      var themeToggleBtn = document.getElementById('theme-toggle');
+
+      themeToggleBtn.addEventListener('click', function() {
+          // toggle icons inside button
+          themeToggleDarkIcon.classList.toggle('hidden');
+          themeToggleLightIcon.classList.toggle('hidden');
+
+          // if set via local storage previously
+          if (localStorage.getItem('color-theme')) {
+              if (localStorage.getItem('color-theme') === 'light') {
+                  document.documentElement.classList.add('dark');
+                  localStorage.setItem('color-theme', 'dark');
+              } else {
+                  document.documentElement.classList.remove('dark');
+                  localStorage.setItem('color-theme', 'light');
+              }
+
+          // if NOT set via local storage previously
+          } else {
+              if (document.documentElement.classList.contains('dark')) {
+                  document.documentElement.classList.remove('dark');
+                  localStorage.setItem('color-theme', 'light');
+              } else {
+                  document.documentElement.classList.add('dark');
+                  localStorage.setItem('color-theme', 'dark');
+              }
+          }
+      });
+    </script>
   </body>
 </html>
