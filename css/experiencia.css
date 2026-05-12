@@ -31,10 +31,6 @@
   z-index: 0;
 }
 
-.timeline-item:first-child {
-  width: calc(50% - 67px);
-}
-
 .timeline-item {
   position: relative;
   padding: 20px;
@@ -91,6 +87,7 @@
   .timeline-item:nth-child(odd) {
     margin-right: calc(50% + 28px);
     text-align: right;
+    width: auto;
   }
   .timeline-item:nth-child(odd)::after {
     left: auto;
